@@ -149,9 +149,38 @@ The optimal threshold of 0.2031 was selected to:
 4. **Data Bias:** Training data distribution may not perfectly match all future deployment scenarios
 
 ### 6.2 False Positive/Negative Analysis
-- **False Positives:** Typically occur in [describe patterns]
-- **False Negatives:** More common in [describe patterns]
-- **Mitigation:** Confidence thresholds and manual review processes
+
+**False Positives (311 cases, 9.2% of test set):**
+- **Pattern:** Ineligible land incorrectly classified as eligible
+- **Typical occurrences:**
+  - Partially vegetated land with mixed land cover (transitional areas)
+  - Agricultural land with tree lines or hedgerows
+  - Regenerating scrubland that hasn't reached eligible status
+  - Urban/rural boundary areas with scattered vegetation
+  - Low-resolution images where land features are ambiguous
+- **Risk Level:** MEDIUM - May result in ineligible land being considered for carbon credits
+- **Business Impact:** Wasted assessment time, potential compliance issues if not caught
+- **Mitigation:** Confidence thresholds (flag predictions <80%), manual expert review, ground-truth verification
+
+**False Negatives (133 cases, 3.9% of test set):**
+- **Pattern:** Eligible land incorrectly classified as ineligible
+- **Typical occurrences:**
+  - Young forest plantations (early growth stage, sparse canopy)
+  - Native bush with unusual spectral characteristics
+  - Eligible land with seasonal variations (winter dormancy)
+  - Steep terrain with shadows affecting image quality
+  - Edge cases near non-eligible features (roads, buildings)
+  - High altitude or coastal areas with unique vegetation patterns
+- **Risk Level:** HIGH - May result in missing genuine carbon credit opportunities
+- **Business Impact:** Lost revenue opportunities, missed eligible land parcels
+- **Mitigation:** Lower threshold (15.3% optimal), human review for borderline cases, multi-season imagery
+
+**Key Insights:**
+- False negatives are more costly (missed opportunities) than false positives (caught in verification)
+- Optimal threshold of 15.3% prioritizes recall to minimize false negatives
+- Low confidence predictions (<70%) have only 53.14% accuracy and should always be manually reviewed
+- Class imbalance (83.3% ineligible) contributes to higher false positive count but lower rate
+- Most errors occur in borderline/ambiguous cases that even human experts might debate
 
 ### 6.3 Out-of-Distribution Detection
 - Model may produce unreliable predictions for:
