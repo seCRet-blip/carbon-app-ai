@@ -5,6 +5,7 @@
 This validation report provides a comprehensive assessment of the Carbon Credit Eligibility Classification AI system's performance, accuracy, and reliability for deployment in production environments.
 
 **Model Version:** All NZ Regions Model  
+**Deployment Scope:** New Zealand Only  
 **Date:** November 28, 2025  
 **Status:** Validated for Production Use
 
@@ -19,7 +20,8 @@ This validation report provides a comprehensive assessment of the Carbon Credit 
 - **Parameters:** ~5.3M trainable parameters
 
 ### 1.2 Training Data
-- **Geographic Coverage:** All 18 NZ regions
+- **Geographic Coverage:** All 18 NZ regions (New Zealand only)
+- **Target Deployment:** New Zealand carbon credit market
 - **Total Training Samples:** [Specify from your training logs]
 - **Data Split:** 
   - Training: 70%
@@ -144,9 +146,11 @@ The optimal threshold of 0.2031 was selected to:
 
 ### 6.3 Out-of-Distribution Detection
 - Model may produce unreliable predictions for:
-  - Non-NZ geographic locations (not trained on international data)
+  - **Non-NZ geographic locations:** Model is trained exclusively on New Zealand data and should NOT be used for international locations
   - Urban areas with unusual characteristics
   - Heavily modified/artificial landscapes
+  
+> ⚠️ **IMPORTANT:** This model is designed exclusively for New Zealand land assessment. Do not use for international carbon credit assessments.
 
 ---
 

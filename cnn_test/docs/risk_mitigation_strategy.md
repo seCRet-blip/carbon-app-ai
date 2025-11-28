@@ -4,6 +4,7 @@
 
 **Version:** 1.0  
 **Date:** November 28, 2025  
+**Deployment Scope:** New Zealand Only  
 **Review Frequency:** Quarterly  
 **Owner:** [Organization/Team Name]
 
@@ -11,7 +12,7 @@
 
 ## Executive Summary
 
-This document outlines the comprehensive risk mitigation strategy for deploying the Carbon Credit Eligibility AI system. It identifies potential risks, their impact, likelihood, and specific mitigation measures to ensure safe, reliable, and compliant operation.
+This document outlines the comprehensive risk mitigation strategy for deploying the Carbon Credit Eligibility AI system within New Zealand. It identifies potential risks, their impact, likelihood, and specific mitigation measures to ensure safe, reliable, and compliant operation in accordance with New Zealand regulations and the NZ Emissions Trading Scheme (ETS).
 
 ---
 
@@ -234,30 +235,31 @@ This document outlines the comprehensive risk mitigation strategy for deploying 
 - **Risk Score:** HIGH
 
 **Mitigation Measures:**
-1. **Regulatory Monitoring**
+1. **Regulatory Monitoring (NZ-Specific)**
    - Dedicated compliance officer
-   - Subscription to regulatory updates
+   - Monitor NZ Climate Change Response Act updates
+   - Track EPA ETS rule changes
    - Quarterly compliance reviews
 
 2. **Documentation & Audit Trail**
    - Complete audit trail of all assessments
    - Rationale documentation for AI decisions
-   - Retention of all evidence for 7+ years
+   - Retention of all evidence for 7+ years (NZ requirement)
 
-3. **Expert Consultation**
-   - Legal counsel specializing in carbon credits
-   - Environmental compliance advisors
-   - Regular compliance audits
+3. **Expert Consultation (NZ-Based)**
+   - Legal counsel specializing in NZ carbon credits and ETS
+   - Environmental compliance advisors familiar with NZ regulations
+   - Regular compliance audits by NZ-accredited auditors
 
-4. **Standards Alignment**
-   - Alignment with ISO 14064 (GHG accounting)
-   - Compliance with local carbon credit schemes
-   - Certification by recognized bodies where applicable
+4. **Standards Alignment (NZ Focus)**
+   - Full compliance with NZ Emissions Trading Scheme (ETS)
+   - Alignment with ISO 14064 (GHG accounting) where applicable
+   - Certification by NZ-recognized bodies
 
 ---
 
 #### Risk: Privacy & Data Protection Violations
-- **Impact:** CRITICAL - GDPR/Privacy Act fines, reputational damage
+- **Impact:** CRITICAL - NZ Privacy Act fines, reputational damage
 - **Likelihood:** LOW - With proper controls
 - **Risk Score:** MEDIUM-HIGH
 
@@ -277,10 +279,10 @@ This document outlines the comprehensive risk mitigation strategy for deploying 
    - Right to deletion/correction capabilities
    - Data portability support
 
-4. **Cross-Border Transfers**
-   - Data localization where required
-   - Standard contractual clauses for transfers
-   - Compliance with NZ Privacy Act 2020
+4. **Data Sovereignty (NZ-Only Operation)**
+   - All data stored and processed within New Zealand
+   - No cross-border data transfers (NZ-only deployment)
+   - Full compliance with NZ Privacy Act 2020
 
 ---
 

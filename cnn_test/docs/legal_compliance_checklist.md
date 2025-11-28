@@ -3,16 +3,19 @@
 
 **Document Version:** 1.0  
 **Date:** November 28, 2025  
-**Jurisdiction:** New Zealand (Applicable Internationally)  
+**Jurisdiction:** New Zealand Only  
+**Deployment Scope:** New Zealand  
 **Review Frequency:** Quarterly or upon regulatory change
 
 ---
 
 ## Purpose
 
-This checklist provides a comprehensive overview of legal and compliance considerations for deploying the Carbon Credit Eligibility AI system. It should be reviewed with legal counsel before deployment and updated regularly to reflect changing regulations.
+This checklist provides a comprehensive overview of legal and compliance considerations for deploying the Carbon Credit Eligibility AI system **within New Zealand only**. It should be reviewed with New Zealand legal counsel before deployment and updated regularly to reflect changing regulations.
 
->  **DISCLAIMER:** This document is for informational purposes only and does not constitute legal advice. Consult with qualified legal counsel for specific legal guidance.
+> ⚠️ **DISCLAIMER:** This document is for informational purposes only and does not constitute legal advice. Consult with qualified New Zealand legal counsel for specific legal guidance.
+
+> 📍 **DEPLOYMENT SCOPE:** This system is designed for New Zealand deployment only. International regulations (GDPR, CCPA, etc.) are marked as "Reference Only" and are not required for NZ-only operations.
 
 ---
 
@@ -41,16 +44,18 @@ This checklist provides a comprehensive overview of legal and compliance conside
 | **Data Breach Notification** | ☐ | 72-hour notification process | Create breach procedure |
 | **Cross-border Data Transfer** | ☐ | Adequate protection for transfers | Review transfer mechanisms |
 
-**Priority Actions:**
+**Priority Actions (NZ Privacy Act 2020 Focus):**
 1. [ ] Appoint Privacy Officer
-2. [ ] Conduct Privacy Impact Assessment
-3. [ ] Draft comprehensive privacy notice
-4. [ ] Implement data subject rights processes
-5. [ ] Create data breach response plan
+2. [ ] Conduct Privacy Impact Assessment (NZ requirements)
+3. [ ] Draft comprehensive privacy notice (NZ Privacy Act compliant)
+4. [ ] Implement data subject rights processes (NZ Privacy Principles)
+5. [ ] Create data breach response plan (72-hour notification to Privacy Commissioner)
 
 ---
 
-### 1.2 GDPR Compliance (If Operating in EU/UK)
+### 1.2 GDPR Compliance (NOT APPLICABLE - NZ Deployment Only)
+
+> ⚠️ **NOT REQUIRED:** This section is not applicable as the system operates exclusively within New Zealand. GDPR compliance is only required if expanding to EU/UK in the future.
 
 | Requirement | Status | Evidence/Notes | Action Required |
 |-------------|--------|----------------|-----------------|
@@ -119,19 +124,19 @@ This checklist provides a comprehensive overview of legal and compliance conside
 
 ---
 
-### 2.3 Emerging AI Regulations
+### 2.3 AI Regulations & Standards (NZ Focus)
 
 | Regulation | Status | Applicability | Action Required |
-|------------|--------|---------------|-----------------|
-| **EU AI Act** | ☐ | If operating in EU | Classify risk level, prepare compliance |
-| **NZ Algorithmic Charter** | ☐ | Voluntary commitment | Consider signing charter |
+|------------|--------|---------------|------------------|
+| **NZ Algorithmic Charter** | ☐ | Voluntary commitment (RECOMMENDED) | Consider signing charter |
 | **ISO/IEC 42001 (AI Management)** | ☐ | International standard | Consider certification |
 | **IEEE Standards for AI** | ☐ | Industry best practices | Review relevant standards |
+| **EU AI Act** | ☐ | NOT APPLICABLE (NZ only) | Reference only - not required |
 
-**Priority Actions:**
-1. [ ] Monitor EU AI Act development and classify system
-2. [ ] Review NZ Algorithmic Charter for voluntary compliance
-3. [ ] Assess value of ISO/IEC 42001 certification
+**Priority Actions (NZ Focus):**
+1. [ ] Review and consider signing NZ Algorithmic Charter (voluntary but recommended)
+2. [ ] Assess value of ISO/IEC 42001 certification
+3. [ ] Align with NZ government AI guidance and best practices
 
 ---
 
@@ -460,24 +465,27 @@ This checklist provides a comprehensive overview of legal and compliance conside
 
 ---
 
-## 13. International Expansion Considerations
+## 13. International Expansion Considerations (NOT APPLICABLE - NZ Only)
 
-### 13.1 Multi-Jurisdiction Compliance
+> ⚠️ **NOT REQUIRED:** This system is designed for New Zealand deployment only. International expansion is not planned. If future international deployment is considered, this section should be reviewed and expanded.
 
-| Jurisdiction | Status | Key Regulations | Action Required |
-|--------------|--------|-----------------|-----------------|
-| **Australia** | ☐ | Privacy Act, ACCC rules | Research requirements |
-| **European Union** | ☐ | GDPR, EU AI Act | Assess feasibility |
-| **United Kingdom** | ☐ | UK GDPR, ICO guidelines | Review requirements |
-| **United States** | ☐ | State-specific laws (CCPA, etc.) | Complex compliance analysis |
-| **Canada** | ☐ | PIPEDA, provincial laws | Review requirements |
+### 13.1 Multi-Jurisdiction Compliance (Reference Only)
 
-**Priority Actions:**
-1. [ ] Prioritize target international markets
-2. [ ] Conduct jurisdiction-specific legal research
-3. [ ] Engage local legal counsel in target markets
-4. [ ] Assess data localization requirements
-5. [ ] Plan phased international rollout
+The following jurisdictions would require compliance review if expanding internationally in the future:
+
+| Jurisdiction | Key Regulations | Notes |
+|--------------|-----------------|-------|
+| **Australia** | Privacy Act, ACCC rules | Closest market, similar regulations |
+| **European Union** | GDPR, EU AI Act | Complex compliance requirements |
+| **United Kingdom** | UK GDPR, ICO guidelines | Post-Brexit separate compliance |
+| **United States** | State-specific laws (CCPA, etc.) | Fragmented regulatory landscape |
+| **Canada** | PIPEDA, provincial laws | Federal and provincial compliance |
+
+**Note:** International expansion would require:
+- Engagement of local legal counsel in target jurisdictions
+- Jurisdiction-specific legal research and compliance planning
+- Assessment of data localization and transfer requirements
+- Retraining or validation of model for local conditions
 
 ---
 
@@ -504,29 +512,34 @@ This checklist provides a comprehensive overview of legal and compliance conside
 
 ## 15. Implementation Checklist Summary
 
-### Critical Priority (Complete Before Launch)
+### Critical Priority (Complete Before Launch - NZ Deployment)
 
-- [ ] **Privacy:** Complete Privacy Impact Assessment
+- [ ] **Privacy:** Complete Privacy Impact Assessment (NZ Privacy Act 2020)
 - [ ] **Privacy:** Appoint Privacy Officer
-- [ ] **Privacy:** Draft privacy notices and consent forms
-- [ ] **Privacy:** Implement data subject rights processes
-- [ ] **AI Ethics:** Conduct bias audit
+- [ ] **Privacy:** Draft privacy notices compliant with NZ Privacy Act
+- [ ] **Privacy:** Implement data subject rights processes (NZ Privacy Principles)
+- [ ] **Privacy:** Ensure all data stored within NZ (data sovereignty)
+- [ ] **AI Ethics:** Conduct bias audit across all NZ regions
 - [ ] **AI Transparency:** Implement explainability features
 - [ ] **AI Transparency:** Add AI disclosure notices
+- [ ] **AI Governance:** Review NZ Algorithmic Charter
 - [ ] **Carbon Compliance:** Verify alignment with NZ ETS requirements
-- [ ] **Carbon Compliance:** Establish verifier relationships
-- [ ] **Contracts:** Draft and review Terms of Service
+- [ ] **Carbon Compliance:** Establish relationships with NZ-accredited verifiers
+- [ ] **Carbon Compliance:** Register with EPA (if required)
+- [ ] **Contracts:** Draft and review Terms of Service (NZ law)
 - [ ] **Contracts:** Create standard client agreement
-- [ ] **Liability:** Obtain professional indemnity insurance
-- [ ] **Liability:** Obtain cyber liability insurance
-- [ ] **Security:** Implement Essential 8 controls
+- [ ] **Liability:** Obtain professional indemnity insurance (NZ coverage)
+- [ ] **Liability:** Obtain cyber liability insurance (NZ coverage)
+- [ ] **Security:** Implement Essential 8 controls (NZ CERT recommendations)
 - [ ] **Security:** Create incident response plan
+- [ ] **Security:** Register with CERT NZ
 - [ ] **IP:** Document IP ownership chain
 - [ ] **IP:** Review open-source license compliance
-- [ ] **Employment:** Ensure IP assignment in employee contracts
+- [ ] **Employment:** Ensure IP assignment in employee contracts (NZ employment law)
 - [ ] **Compliance:** Appoint Compliance Officer
 - [ ] **Compliance:** Implement audit logging
-- [ ] **Financial:** Register for GST (if applicable)
+- [ ] **Financial:** Register for GST (if revenue >$60k NZD)
+- [ ] **Financial:** Engage NZ-based accountant for tax compliance
 
 ### High Priority (Complete Within 3 Months)
 
