@@ -15,8 +15,8 @@ from pathlib import Path
 # Import your modules
 from models.efficientnet import EfficientNetClassifier
 from config import MODEL_CONFIG
-import warnings
-warnings.filterwarnings('ignore')
+
+
 
 # Use the optimal threshold from test results
 OPTIMAL_THRESHOLD = 0.2031
