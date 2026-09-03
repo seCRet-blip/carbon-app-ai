@@ -173,12 +173,15 @@ datasets/
 *.qpj
 
 # Keys and credentials
+keys
 keys/
 *.key
 *.pem
 *.crt
 *.p12
 .env
+.env.*
+!.env.example
 config.ini
 secrets.json
 credentials.json

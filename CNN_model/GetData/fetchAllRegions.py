@@ -2,6 +2,7 @@ import os
 import math
 import requests
 import time
+from pathlib import Path
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from requests.adapters import HTTPAdapter
@@ -9,10 +10,29 @@ from urllib3.util.retry import Retry
 from PIL import Image
 import io
 
+
+def _load_linz_api_key():
+    """Load the LINZ Basemaps API key from the environment or a local .env file."""
+    key = os.getenv("LINZ_API_KEY", "").strip()
+    if key:
+        return key
+
+    env_path = Path(__file__).resolve().parent.parent / ".env"
+    if env_path.is_file():
+        for line in env_path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            name, value = line.split("=", 1)
+            if name.strip() == "LINZ_API_KEY":
+                return value.strip().strip('"').strip("'")
+    return ""
+
+
 # ==============================
 # CONFIG
 # ==============================
-API_KEY = os.getenv("LINZ_API_KEY", "")
+API_KEY = _load_linz_api_key()
 OUTPUT_ROOT = "nz_data"
 ZOOM = 15
 
@@ -261,6 +281,12 @@ def download_region(region_name, bbox):
 # MAIN
 # ==============================
 if __name__ == "__main__":
+    if not API_KEY:
+        raise SystemExit(
+            "LINZ_API_KEY is not set. Copy .env.example to .env and add your "
+            "LINZ Basemaps API key, or set the LINZ_API_KEY environment variable."
+        )
+
     print("🇳🇿 NEW ZEALAND AERIAL IMAGERY DOWNLOADER")
     print("=" * 60)
     print(f"Zoom level: {ZOOM}")
