@@ -1,12 +1,12 @@
 # CNN training pipeline
 
-Training, data collection, and inference code for the carbon credit eligibility classifier.
+Training, data collection, and inference code for this **proof-of-concept** carbon credit eligibility classifier.
 
-The project overview, results, and setup steps are in the [root README](../README.md).
+**Start here for the project overview and setup:** [root README](../README.md)
 
 ```
 CNN_model/
-├── models/          # EfficientNet-B3, ResNet-50, ensemble
+├── models/          # EfficientNet, ResNet-50, ensemble
 ├── data/            # Dataset classes and augmentation
 ├── training/        # Trainer, losses, samplers
 ├── GetData/         # LINZ tile download and GIS labelling
@@ -17,7 +17,7 @@ CNN_model/
 └── requirements.txt
 ```
 
-Quick commands (run from this folder):
+Quick commands (from this folder):
 
 ```bash
 pip install -r requirements.txt
